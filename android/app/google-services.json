@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "965143620885",
+    "project_id": "thandri-eb786",
+    "storage_bucket": "thandri-eb786.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965143620885:android:ca0192c431a073b2ff0d1c",
+        "android_client_info": {
+          "package_name": "com.example.shalom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD_uJ7udrN47QU5VinjUH1sbCDUdAS9MU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
