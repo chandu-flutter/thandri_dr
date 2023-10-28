@@ -56,26 +56,75 @@ class NavBar extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(
-              Icons.language,
-              size: 20,
-              color: Color.fromARGB(255, 255, 255, 255),
-            ),
-            title: const Text(
-              "Website",
-              style: TextStyle(color: Colors.white, fontSize: 16),
-            ),
-            onTap: () {
-              _launchUrl("thandrisannidhiministries.in");
-            },
-          ),
-          ListTile(
-            leading: const Icon(
               Icons.phone,
               size: 20,
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             title: const Text(
               "Contact",
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const ContactScreen();
+                  },
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.policy,
+              size: 20,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+            title: const Text(
+              "Privacy policy ",
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const ContactScreen();
+                  },
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.control_point_duplicate,
+              size: 20,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+            title: const Text(
+              "Terms & conditions ",
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const ContactScreen();
+                  },
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.redo_outlined,
+              size: 20,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+            title: const Text(
+              "Refund management ",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             onTap: () {

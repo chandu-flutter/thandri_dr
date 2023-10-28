@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:shalom/adminscreen.dart';
+
 import 'package:shalom/downloaad.dart';
 import 'package:shalom/navbar.dart';
 import 'package:shalom/new.dart';
 import 'package:shalom/songbook.dart';
 import 'package:lottie/lottie.dart';
+import 'package:shalom/website.dart';
+
+import 'prayer_victories.dart';
+import 'short_sermons.dart';
+import 'youtube_live.dart';
+import 'zoom_live.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -123,108 +129,118 @@ class HomeScreen extends StatelessWidget {
                     label2: "Here",
                   ),
                 ),
-                Linked(
-                  icon: Icons.monetization_on,
-                  label1: "",
-                  label2: "Tithe",
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Linked(
-                  icon: Icons.description,
-                  label1: "Satya",
-                  label2: "Darsanam",
-                ),
-                Linked(
-                  icon: Icons.edit,
-                  label1: "",
-                  label2: "Blog",
-                ),
-                Linked(
-                  icon: Icons.monetization_on,
-                  label1: "",
-                  label2: "Tithe",
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Linked(
-                  icon: Icons.description,
-                  label1: "Satya",
-                  label2: "Darsanam",
-                ),
-                Linked(
-                  icon: Icons.edit,
-                  label1: "",
-                  label2: "Blog",
-                ),
-                Linked(
-                  icon: Icons.monetization_on,
-                  label1: "",
-                  label2: "Tithe",
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return AdminScreen();
-                    },
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return PrayerVictories();
+                        },
+                      ),
+                    );
+                  },
+                  child: Linked(
+                    icon: Icons.task_alt,
+                    label1: "Prayer",
+                    label2: "Victories",
                   ),
-                );
-              },
-              child: Container(
-                height: 80,
-                width: 360,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromARGB(255, 30, 36, 40),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade600,
-                      blurRadius: 10,
-                      spreadRadius: 1,
-                      offset: const Offset(4, 4),
-                    ),
-                    const BoxShadow(
-                      color: Colors.white,
-                      blurRadius: 10,
-                      spreadRadius: 1,
-                      offset: Offset(-4, -4),
-                    ),
-                  ],
                 ),
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'ADMIN',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          letterSpacing: 40,
-                          fontWeight: FontWeight.w700),
-                    )
-                  ],
+              ],
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ZoomLive();
+                        },
+                      ),
+                    );
+                  },
+                  child: Linked(
+                    icon: Icons.description,
+                    label1: "Zoom",
+                    label2: "Live",
+                  ),
                 ),
-              ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return YoutubeLive();
+                        },
+                      ),
+                    );
+                  },
+                  child: Linked(
+                    icon: Icons.live_tv,
+                    label1: "Sunday",
+                    label2: "Live",
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ShortSermons();
+                        },
+                      ),
+                    );
+                  },
+                  child: Linked(
+                    icon: Icons.campaign,
+                    label1: "Short",
+                    label2: "Sermons",
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Website();
+                        },
+                      ),
+                    );
+                  },
+                  child: Linked(
+                    icon: Icons.public,
+                    label1: "",
+                    label2: "Website",
+                  ),
+                ),
+                Linked(
+                  icon: Icons.edit,
+                  label1: "",
+                  label2: "Blog",
+                ),
+                Linked(
+                  icon: Icons.monetization_on,
+                  label1: "",
+                  label2: "Tithe",
+                ),
+              ],
             ),
             SizedBox(
               height: 30,
