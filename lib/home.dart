@@ -166,7 +166,7 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                   child: Linked(
-                    icon: Icons.description,
+                    icon: Icons.meeting_room,
                     label1: "Zoom",
                     label2: "Live",
                   ),
