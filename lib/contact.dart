@@ -21,7 +21,7 @@ class ContactScreen extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () async {
-                    final Uri url = Uri(scheme: 'tel', path: "8374420153");
+                    final Uri url = Uri(scheme: 'tel', path: "9666534389");
                     if (await canLaunchUrl(url)) {
                       await launchUrl(url);
                     } else {
@@ -58,7 +58,7 @@ class ContactScreen extends StatelessWidget {
                   child: Center(
                     child: InkWell(
                       onTap: () async {
-                        final Uri url = Uri(scheme: 'tel', path: "8374420153");
+                        final Uri url = Uri(scheme: 'tel', path: "9666534389");
                         if (await canLaunchUrl(url)) {
                           await launchUrl(url);
                         } else {
@@ -104,7 +104,7 @@ class ContactScreen extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          'CHILAKALURIPET,GUNTUR DIST',
+                          'CHILAKALURIPET,PALNADU DIST',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
