@@ -19,21 +19,42 @@ class ContactScreen extends StatelessWidget {
           children: [
             Column(
               children: [
-                Container(
-                  width: 200,
-                  child: Lottie.asset("animations/phone.json"),
-                ),
-                Divider(
-                  thickness: 1,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  indent: 120,
-                  endIndent: 120,
+                InkWell(
+                  onTap: () async {
+                    final Uri url = Uri(scheme: 'tel', path: "8374420153");
+                    if (await canLaunchUrl(url)) {
+                      await launchUrl(url);
+                    } else {
+                      print('cannot launch this url');
+                    }
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade600,
+                          blurRadius: 10,
+                          spreadRadius: 1,
+                          offset: const Offset(4, 4),
+                        ),
+                        const BoxShadow(
+                          color: Colors.white,
+                          blurRadius: 10,
+                          spreadRadius: 1,
+                          offset: Offset(-4, -4),
+                        ),
+                      ],
+                    ),
+                    width: 200,
+                    child: Lottie.asset("animations/phone.json"),
+                  ),
                 ),
                 SizedBox(
-                  width: 20,
+                  height: 20,
                 ),
                 Container(
-                  width: 150,
                   child: Center(
                     child: InkWell(
                       onTap: () async {
@@ -45,7 +66,7 @@ class ContactScreen extends StatelessWidget {
                         }
                       },
                       child: Text(
-                        '8374420153',
+                        'For Prayer Requests plz call',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,
@@ -54,12 +75,8 @@ class ContactScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Divider(
-                  thickness: 0.5,
-                  color: Color.fromARGB(255, 128, 0, 128),
-                  height: 80,
-                  indent: 80,
-                  endIndent: 80,
+                SizedBox(
+                  height: 60,
                 ),
               ],
             ),
@@ -68,12 +85,6 @@ class ContactScreen extends StatelessWidget {
                 Container(
                   width: 100,
                   child: Lottie.asset("animations/loc.json"),
-                ),
-                Divider(
-                  thickness: 1,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  indent: 120,
-                  endIndent: 120,
                 ),
                 SizedBox(
                   width: 20,
@@ -116,6 +127,16 @@ class ContactScreen extends StatelessWidget {
                           'ANDHRA PRADESH,INDIA',
                           style: TextStyle(
                             fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          '9666534389,9666774417',
+                          style: TextStyle(
+                            fontSize: 18,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
