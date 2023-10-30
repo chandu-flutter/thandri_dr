@@ -71,18 +71,11 @@ class HomeScreen extends StatelessWidget {
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.auto_stories,
-                          size: 80,
-                          color: Color.fromARGB(255, 128, 0, 128),
+                        Image(
+                          image: AssetImage('images/promise.jpg'),
+                          width: 340,
+                          height: 200,
                         ),
-                        Text(
-                          'Song Book',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 22,
-                          ),
-                        )
                       ],
                     ),
                   ),
@@ -184,7 +177,7 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: Linked(
                     icon: Icons.live_tv,
-                    label1: "Sunday",
+                    label1: "",
                     label2: "Live",
                   ),
                 ),
@@ -230,10 +223,22 @@ class HomeScreen extends StatelessWidget {
                     label2: "Website",
                   ),
                 ),
-                Linked(
-                  icon: Icons.edit,
-                  label1: "",
-                  label2: "Blog",
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const SongBookScreen();
+                        },
+                      ),
+                    );
+                  },
+                  child: Linked(
+                    icon: Icons.auto_stories,
+                    label1: "Song",
+                    label2: "Book",
+                  ),
                 ),
                 Linked(
                   icon: Icons.monetization_on,
