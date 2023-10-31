@@ -21,7 +21,7 @@ class _MyMapPageState extends State<MyMapPage> {
   final List<Marker> markerList = const [
     Marker(
       markerId: MarkerId('first'),
-      position: LatLng(16.097527964752523, 80.15456859699493),
+      position: LatLng(16.090539, 80.154106),
       infoWindow: InfoWindow(title: 'Thandri Sannidhi Church'),
     ),
     Marker(
@@ -49,7 +49,7 @@ class _MyMapPageState extends State<MyMapPage> {
       body: SafeArea(
         child: GoogleMap(
           initialCameraPosition: _initialPosition,
-          mapType: MapType.normal,
+          mapType: MapType.terrain,
           markers: Set<Marker>.of(myMarker),
           onMapCreated: (GoogleMapController controller) {
             _controller.complete(controller);
